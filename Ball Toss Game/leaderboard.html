@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Leaderboard 🏆</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+<h1>🏆 Leaderboard</h1>
+
+<nav>
+    <a href="index.html">🏠 Home</a>
+    <a href="instructions.html">📘 How to Play</a>
+    <a href="play.html">🎮 Play Game</a>
+</nav>
+
+<div id="scoresBox">
+    <ul id="scoreList"></ul>
+</div>
+
+<script>
+function loadScores() {
+    let scores = JSON.parse(localStorage.getItem("ballTossScores")) || [];
+    
+    const list = document.getElementById("scoreList");
+    list.innerHTML = "";
+
+    if (scores.length === 0) {
+        list.innerHTML = "<li>No scores yet — play a game first!</li>";
+        return;
+    }
+
+    scores.forEach((item, index) => {
+        let li = document.createElement("li");
+        li.textContent = `${index + 1}. ${item.score} points`;
+        list.appendChild(li);
+    });
+}
+
+loadScores();
+</script>
+
+</body>
+</html>

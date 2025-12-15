@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ball Toss Carnival — Ultimate Edition</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+
+    <h1 class="title">🎪 Ball Toss Carnival — Ultimate Edition 🎳</h1>
+
+    <div id="menu">
+        <h2>Select Difficulty</h2>
+        <button onclick="startGame('easy')">Easy</button>
+        <button onclick="startGame('normal')">Normal</button>
+        <button onclick="startGame('hard')">Hard</button>
+    </div>
+
+    <div id="gameUI" class="hidden">
+        <div class="panel">
+            <p>Score: <span id="score">0</span></p>
+            <p>Balls: <span id="balls">5</span></p>
+            <p>Time: <span id="timer">45</span>s</p>
+            <p>Power: <span id="power">None</span></p>
+        </div>
+
+        <canvas id="gameCanvas" width="600" height="420"></canvas>
+    </div>
+
+    <div id="gameOver" class="hidden">
+        <h2>GAME OVER 🎉</h2>
+        <p>Your Score: <span id="finalScore"></span></p>
+        <button onclick="location.reload()">Play Again</button>
+    </div>
+
+    <script src="js/game.js"></script>
+
+</body>
+
+</html>

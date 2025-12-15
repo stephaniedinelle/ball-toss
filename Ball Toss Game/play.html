@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Play • Ball Toss Carnival</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body class="cute-theme">
+
+    <!-- PAGE HEADER -->
+    <h1 class="cute-title">🎀 Ball Toss Carnival • Play 🎮</h1>
+
+    <!-- Navigation Buttons -->
+    <div class="menu-buttons">
+        <a href="index.html" class="cute-btn small-btn">🏠 Home</a>
+        <a href="instructions.html" class="cute-btn small-btn">📘 How to Play</a>
+        <a href="leaderboard.html" class="cute-btn small-btn">🏆 Leaderboard</a>
+    </div>
+
+    <!-- CARD LAYOUT CONTAINER -->
+    <div class="game-card">
+
+        <!-- Score Panel -->
+        <div class="panel">
+            <p>Score: <span id="score">0</span></p>
+            <p>Balls: <span id="balls">5</span></p>
+            <p>Time: <span id="timer">45</span>s</p>
+            <p>Power: <span id="power">None</span></p>
+        </div>
+
+        <!-- Canvas Section -->
+        <canvas id="gameCanvas" width="600" height="420" class="game-canvas"></canvas>
+
+        <!-- End Game Message -->
+        <div id="gameOverMsg" class="hidden end-message">
+            <h2>🎉 GAME OVER 🎉</h2>
+            <p>Your Final Score: <span id="finalScore"></span></p>
+            <button class="cute-btn" onclick="location.reload()">Play Again</button>
+        </div>
+
+    </div>
+
+<script src="js/game.js"></script>
+</body>
+</html>
